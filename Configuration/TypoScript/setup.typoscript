@@ -1,0 +1,75 @@
+plugin.tx_pbnnewskiatlas27rate {
+    view {
+        templateRootPaths.0 = EXT:pbn_newskiatlas27_rate/Resources/Private/Templates/
+        templateRootPaths.10 = {$plugin.tx_pbnnewskiatlas27rate.view.templateRootPath}
+        partialRootPaths.0 = EXT:pbn_newskiatlas27_rate/Resources/Private/Partials/
+        partialRootPaths.10 = {$plugin.tx_pbnnewskiatlas27rate.view.partialRootPath}
+    }
+
+    settings {
+        lockPeriod = {$plugin.tx_pbnnewskiatlas27rate.settings.lockPeriod}
+        ipLimit = {$plugin.tx_pbnnewskiatlas27rate.settings.ipLimit}
+        minSubmitTime = {$plugin.tx_pbnnewskiatlas27rate.settings.minSubmitTime}
+        tokenLifetime = {$plugin.tx_pbnnewskiatlas27rate.settings.tokenLifetime}
+        cookieName = {$plugin.tx_pbnnewskiatlas27rate.settings.cookieName}
+        questionStoragePid = {$plugin.tx_pbnnewskiatlas27rate.settings.questionStoragePid}
+        voteStoragePid = {$plugin.tx_pbnnewskiatlas27rate.settings.voteStoragePid}
+        allowedTables = {$plugin.tx_pbnnewskiatlas27rate.settings.allowedTables}
+        ajaxTypeNum = {$plugin.tx_pbnnewskiatlas27rate.settings.ajaxTypeNum}
+        ajaxPid = {$plugin.tx_pbnnewskiatlas27rate.settings.ajaxPid}
+        maxStars = {$plugin.tx_pbnnewskiatlas27rate.settings.maxStars}
+        showResults = {$plugin.tx_pbnnewskiatlas27rate.settings.showResults}
+        minVotesToShowResults = {$plugin.tx_pbnnewskiatlas27rate.settings.minVotesToShowResults}
+        resultsMaxAge = {$plugin.tx_pbnnewskiatlas27rate.settings.resultsMaxAge}
+        decimalSeparator = {$plugin.tx_pbnnewskiatlas27rate.settings.decimalSeparator}
+        includeCss = {$plugin.tx_pbnnewskiatlas27rate.settings.includeCss}
+        includeJs = {$plugin.tx_pbnnewskiatlas27rate.settings.includeJs}
+    }
+}
+
+#
+# Full rating widget (form + averages). Cached together with the page;
+# lock status and voting are handled by the JSON endpoint below.
+#
+# Fluid:
+#   <f:cObject typoscriptObjectPath="lib.pbnNewskiatlas27Rate"
+#              data="{table: 'tx_pbnnewskiatlas27_domain_model_resort', uid: resort.uid}" />
+#
+lib.pbnNewskiatlas27Rate = USER
+lib.pbnNewskiatlas27Rate {
+    userFunc = Pbn\PbnNewskiatlas27Rate\Frontend\RatingWidget->render
+    view < plugin.tx_pbnnewskiatlas27rate.view
+    settings < plugin.tx_pbnnewskiatlas27rate.settings
+}
+
+#
+# Compact summary (stars of the summary question + number of votes),
+# e.g. for resort cards in the list view.
+#
+lib.pbnNewskiatlas27RateSummary < lib.pbnNewskiatlas27Rate
+lib.pbnNewskiatlas27RateSummary.userFunc = Pbn\PbnNewskiatlas27Rate\Frontend\RatingWidget->renderSummary
+
+#
+# JSON endpoint: POST pbnrate[action]=status|vote
+#
+pbnNewskiatlas27RateAjax = PAGE
+pbnNewskiatlas27RateAjax {
+    typeNum = {$plugin.tx_pbnnewskiatlas27rate.settings.ajaxTypeNum}
+    config {
+        disableAllHeaderCode = 1
+        additionalHeaders {
+            10.header = Content-Type: application/json; charset=utf-8
+            20.header = Cache-Control: no-store, private
+            30.header = X-Robots-Tag: noindex, nofollow
+        }
+        admPanel = 0
+        debug = 0
+        no_cache = 1
+        xhtml_cleaning = 0
+    }
+    10 = USER_INT
+    10 {
+        userFunc = Pbn\PbnNewskiatlas27Rate\Frontend\AjaxEndpoint->handle
+        settings < plugin.tx_pbnnewskiatlas27rate.settings
+    }
+}

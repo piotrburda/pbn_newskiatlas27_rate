@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="pl" datatype="plaintext" original="EXT:pbn_newskiatlas27_rate/Resources/Private/Language/locallang.xlf" product-name="pbn_newskiatlas27_rate">
+        <header/>
+        <body>
+            <trans-unit id="widget.title">
+                <source>Rate this resort</source>
+                <target>Oceń ośrodek</target>
+            </trans-unit>
+            <trans-unit id="widget.intro.days">
+                <source>Rate your stay from 1 to %1$s stars. You can rate the same resort again after %2$s day(s).</source>
+                <target>Oceń swój pobyt w skali od 1 do %1$s gwiazdek. Ten sam ośrodek możesz ocenić ponownie po %2$s dniach.</target>
+            </trans-unit>
+            <trans-unit id="widget.intro.hours">
+                <source>Rate your stay from 1 to %1$s stars. You can rate the same resort again after %2$s hour(s).</source>
+                <target>Oceń swój pobyt w skali od 1 do %1$s gwiazdek. Ten sam ośrodek możesz ocenić ponownie po %2$s godzinach.</target>
+            </trans-unit>
+            <trans-unit id="widget.votes">
+                <source>Number of ratings: %s</source>
+                <target>Liczba ocen: %s</target>
+            </trans-unit>
+            <trans-unit id="widget.noVotes">
+                <source>No ratings yet – be the first.</source>
+                <target>Brak ocen – bądź pierwszy.</target>
+            </trans-unit>
+            <trans-unit id="widget.starLabel">
+                <source>%1$s of %2$s stars</source>
+                <target>%1$s z %2$s gwiazdek</target>
+            </trans-unit>
+            <trans-unit id="widget.average">
+                <source>Average %1$s of %2$s, %3$s rating(s)</source>
+                <target>Średnia %1$s z %2$s, liczba ocen: %3$s</target>
+            </trans-unit>
+            <trans-unit id="widget.requiredHint">
+                <source>* required</source>
+                <target>* pole wymagane</target>
+            </trans-unit>
+            <trans-unit id="widget.submit">
+                <source>Submit rating</source>
+                <target>Wyślij ocenę</target>
+            </trans-unit>
+            <trans-unit id="widget.noscript">
+                <source>Please enable JavaScript to rate this resort.</source>
+                <target>Aby ocenić ośrodek, włącz obsługę JavaScript.</target>
+            </trans-unit>
+            <trans-unit id="js.loading">
+                <source>Checking whether you can rate…</source>
+                <target>Sprawdzam możliwość oddania oceny…</target>
+            </trans-unit>
+            <trans-unit id="js.locked">
+                <source>You have already rated this resort. You can add a new rating after %s.</source>
+                <target>Ten ośrodek był już przez Ciebie oceniony. Kolejną ocenę możesz dodać po %s.</target>
+            </trans-unit>
+            <trans-unit id="js.thanks">
+                <source>Thank you for your rating. You can add a new one after %s.</source>
+                <target>Dziękujemy za ocenę. Kolejną możesz dodać po %s.</target>
+            </trans-unit>
+            <trans-unit id="js.required">
+                <source>Please answer the required questions.</source>
+                <target>Uzupełnij wymagane pytania.</target>
+            </trans-unit>
+            <trans-unit id="js.noAnswers">
+                <source>Please select at least one star rating.</source>
+                <target>Zaznacz co najmniej jedną ocenę.</target>
+            </trans-unit>
+            <trans-unit id="js.tooFast">
+                <source>Just a moment – please submit again.</source>
+                <target>Chwileczkę – wyślij ocenę ponownie.</target>
+            </trans-unit>
+            <trans-unit id="js.expired">
+                <source>The form has expired. Please reload the page.</source>
+                <target>Formularz wygasł. Odśwież stronę.</target>
+            </trans-unit>
+            <trans-unit id="js.error">
+                <source>The rating could not be saved. Please try again later.</source>
+                <target>Nie udało się zapisać oceny. Spróbuj ponownie później.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

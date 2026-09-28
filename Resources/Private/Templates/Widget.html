@@ -1,0 +1,61 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<section class="pbnrate" id="{rating.id}"
+         data-pbnrate
+         data-endpoint="{rating.endpoint}"
+         data-table="{rating.table}"
+         data-uid="{rating.uid}"
+         data-msg-loading="{f:translate(key: 'js.loading')}"
+         data-msg-locked="{f:translate(key: 'js.locked')}"
+         data-msg-thanks="{f:translate(key: 'js.thanks')}"
+         data-msg-required="{f:translate(key: 'js.required')}"
+         data-msg-no-answers="{f:translate(key: 'js.noAnswers')}"
+         data-msg-too-fast="{f:translate(key: 'js.tooFast')}"
+         data-msg-expired="{f:translate(key: 'js.expired')}"
+         data-msg-error="{f:translate(key: 'js.error')}"
+         data-msg-votes="{f:translate(key: 'widget.votes')}"
+         aria-labelledby="{rating.id}-title">
+
+    <header class="pbnrate__header">
+        <h2 class="pbnrate__title" id="{rating.id}-title"><f:translate key="widget.title" /></h2>
+        <p class="pbnrate__intro">
+            <f:if condition="{rating.lockDays} > 0">
+                <f:then><f:translate key="widget.intro.days" arguments="{0: rating.maxStars, 1: rating.lockDays}" /></f:then>
+                <f:else><f:translate key="widget.intro.hours" arguments="{0: rating.maxStars, 1: rating.lockHours}" /></f:else>
+            </f:if>
+        </p>
+        <p class="pbnrate__total" data-pbnrate-total>
+            <f:if condition="{rating.results.visible}">
+                <f:then><f:translate key="widget.votes" arguments="{0: rating.results.totalVotes}" /></f:then>
+                <f:else><f:translate key="widget.noVotes" /></f:else>
+            </f:if>
+        </p>
+    </header>
+
+    <form class="pbnrate__form" data-pbnrate-form novalidate>
+        <f:for each="{rating.groups}" as="group">
+            <fieldset class="pbnrate__group">
+                <legend class="pbnrate__group-title">{group.title}</legend>
+                <f:if condition="{group.description}">
+                    <p class="pbnrate__group-description">{group.description}</p>
+                </f:if>
+
+                <f:for each="{group.questions}" as="question">
+                    <f:render partial="Question" arguments="{rating: rating, question: question}" />
+                </f:for>
+            </fieldset>
+        </f:for>
+
+        <div class="pbnrate__hp" aria-hidden="true">
+            <label>Website <input type="text" name="pbnrate[website]" value="" tabindex="-1" autocomplete="off"></label>
+        </div>
+
+        <div class="pbnrate__actions">
+            <p class="pbnrate__hint"><f:translate key="widget.requiredHint" /></p>
+            <button type="submit" class="pbnrate__submit btn btn-primary"><f:translate key="widget.submit" /></button>
+        </div>
+    </form>
+
+    <div class="pbnrate__message" data-pbnrate-message role="status" aria-live="polite"></div>
+    <noscript><p class="pbnrate__message"><f:translate key="widget.noscript" /></p></noscript>
+</section>
+</html>

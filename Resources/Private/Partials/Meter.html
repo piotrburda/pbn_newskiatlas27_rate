@@ -1,0 +1,9 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<span class="pbnrate__meter" aria-hidden="true">
+    <span class="pbnrate__meter-base"><f:for each="{rating.starValues}" as="value">★</f:for></span>
+    <span class="pbnrate__meter-fill" data-pbnrate-fill style="width: {result.percentCss}%"><f:for each="{rating.starValues}" as="value">★</f:for></span>
+</span>
+<span class="pbnrate__average" data-pbnrate-average>{result.averageFormatted}</span>
+<span class="pbnrate__count">(<span data-pbnrate-count>{result.count}</span>)</span>
+<span class="pbnrate__sr-only"><f:translate key="widget.average" arguments="{0: result.averageFormatted, 1: rating.maxStars, 2: result.count}" /></span>
+</html>

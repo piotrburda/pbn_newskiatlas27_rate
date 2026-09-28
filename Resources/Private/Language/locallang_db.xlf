@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="EXT:pbn_newskiatlas27_rate/Resources/Private/Language/locallang_db.xlf" product-name="pbn_newskiatlas27_rate">
+        <header/>
+        <body>
+            <trans-unit id="tx_pbnnewskiatlas27rate_domain_model_questiongroup">
+                <source>Rating: question group</source>
+            </trans-unit>
+            <trans-unit id="tx_pbnnewskiatlas27rate_domain_model_question">
+                <source>Rating: question</source>
+            </trans-unit>
+            <trans-unit id="tx_pbnnewskiatlas27rate_domain_model_vote">
+                <source>Rating: vote</source>
+            </trans-unit>
+            <trans-unit id="tx_pbnnewskiatlas27rate_domain_model_voteanswer">
+                <source>Rating: answer</source>
+            </trans-unit>
+            <trans-unit id="questiongroup.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="questiongroup.description">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="questiongroup.questions">
+                <source>Questions</source>
+            </trans-unit>
+            <trans-unit id="question.title">
+                <source>Question</source>
+            </trans-unit>
+            <trans-unit id="question.description">
+                <source>Hint</source>
+            </trans-unit>
+            <trans-unit id="question.description.help">
+                <source>Short hint shown under the question, e.g. what 5 stars mean.</source>
+            </trans-unit>
+            <trans-unit id="question.required">
+                <source>Required</source>
+            </trans-unit>
+            <trans-unit id="question.is_summary">
+                <source>Summary question</source>
+            </trans-unit>
+            <trans-unit id="question.is_summary.help">
+                <source>Its average is shown in the compact summary (e.g. resort list).</source>
+            </trans-unit>
+            <trans-unit id="question.applies_to">
+                <source>Only for tables</source>
+            </trans-unit>
+            <trans-unit id="question.applies_to.help">
+                <source>Comma separated table names. Empty = all rated tables.</source>
+            </trans-unit>
+            <trans-unit id="vote.hidden">
+                <source>Excluded from results</source>
+            </trans-unit>
+            <trans-unit id="vote.hidden.help">
+                <source>Hidden votes are ignored in averages (e.g. spam) but still count for the lock.</source>
+            </trans-unit>
+            <trans-unit id="vote.crdate">
+                <source>Date</source>
+            </trans-unit>
+            <trans-unit id="vote.foreign_table">
+                <source>Table</source>
+            </trans-unit>
+            <trans-unit id="vote.foreign_uid">
+                <source>Record uid</source>
+            </trans-unit>
+            <trans-unit id="vote.fe_user">
+                <source>Frontend user</source>
+            </trans-unit>
+            <trans-unit id="vote.answers">
+                <source>Answers</source>
+            </trans-unit>
+            <trans-unit id="voteanswer.question">
+                <source>Question</source>
+            </trans-unit>
+            <trans-unit id="voteanswer.value">
+                <source>Stars</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

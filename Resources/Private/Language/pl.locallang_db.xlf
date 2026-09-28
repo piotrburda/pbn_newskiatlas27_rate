@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="pl" datatype="plaintext" original="EXT:pbn_newskiatlas27_rate/Resources/Private/Language/locallang_db.xlf" product-name="pbn_newskiatlas27_rate">
+        <header/>
+        <body>
+            <trans-unit id="tx_pbnnewskiatlas27rate_domain_model_questiongroup">
+                <source>Rating: question group</source>
+                <target>Ocena: grupa pytań</target>
+            </trans-unit>
+            <trans-unit id="tx_pbnnewskiatlas27rate_domain_model_question">
+                <source>Rating: question</source>
+                <target>Ocena: pytanie</target>
+            </trans-unit>
+            <trans-unit id="tx_pbnnewskiatlas27rate_domain_model_vote">
+                <source>Rating: vote</source>
+                <target>Ocena: głos</target>
+            </trans-unit>
+            <trans-unit id="tx_pbnnewskiatlas27rate_domain_model_voteanswer">
+                <source>Rating: answer</source>
+                <target>Ocena: odpowiedź</target>
+            </trans-unit>
+            <trans-unit id="questiongroup.title">
+                <source>Title</source>
+                <target>Tytuł</target>
+            </trans-unit>
+            <trans-unit id="questiongroup.description">
+                <source>Description</source>
+                <target>Opis</target>
+            </trans-unit>
+            <trans-unit id="questiongroup.questions">
+                <source>Questions</source>
+                <target>Pytania</target>
+            </trans-unit>
+            <trans-unit id="question.title">
+                <source>Question</source>
+                <target>Pytanie</target>
+            </trans-unit>
+            <trans-unit id="question.description">
+                <source>Hint</source>
+                <target>Podpowiedź</target>
+            </trans-unit>
+            <trans-unit id="question.description.help">
+                <source>Short hint shown under the question, e.g. what 5 stars mean.</source>
+                <target>Krótka podpowiedź pod pytaniem, np. co oznacza 5 gwiazdek.</target>
+            </trans-unit>
+            <trans-unit id="question.required">
+                <source>Required</source>
+                <target>Wymagane</target>
+            </trans-unit>
+            <trans-unit id="question.is_summary">
+                <source>Summary question</source>
+                <target>Pytanie podsumowujące</target>
+            </trans-unit>
+            <trans-unit id="question.is_summary.help">
+                <source>Its average is shown in the compact summary (e.g. resort list).</source>
+                <target>Średnia z tego pytania jest pokazywana w skróconym podsumowaniu (np. na liście ośrodków).</target>
+            </trans-unit>
+            <trans-unit id="question.applies_to">
+                <source>Only for tables</source>
+                <target>Tylko dla tabel</target>
+            </trans-unit>
+            <trans-unit id="question.applies_to.help">
+                <source>Comma separated table names. Empty = all rated tables.</source>
+                <target>Nazwy tabel oddzielone przecinkami. Puste = wszystkie oceniane tabele.</target>
+            </trans-unit>
+            <trans-unit id="vote.hidden">
+                <source>Excluded from results</source>
+                <target>Wykluczony z wyników</target>
+            </trans-unit>
+            <trans-unit id="vote.hidden.help">
+                <source>Hidden votes are ignored in averages (e.g. spam) but still count for the lock.</source>
+                <target>Ukryte głosy nie są liczone do średnich (np. spam), ale nadal liczą się do blokady.</target>
+            </trans-unit>
+            <trans-unit id="vote.crdate">
+                <source>Date</source>
+                <target>Data</target>
+            </trans-unit>
+            <trans-unit id="vote.foreign_table">
+                <source>Table</source>
+                <target>Tabela</target>
+            </trans-unit>
+            <trans-unit id="vote.foreign_uid">
+                <source>Record uid</source>
+                <target>UID rekordu</target>
+            </trans-unit>
+            <trans-unit id="vote.fe_user">
+                <source>Frontend user</source>
+                <target>Użytkownik frontendowy</target>
+            </trans-unit>
+            <trans-unit id="vote.answers">
+                <source>Answers</source>
+                <target>Odpowiedzi</target>
+            </trans-unit>
+            <trans-unit id="voteanswer.question">
+                <source>Question</source>
+                <target>Pytanie</target>
+            </trans-unit>
+            <trans-unit id="voteanswer.value">
+                <source>Stars</source>
+                <target>Gwiazdki</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

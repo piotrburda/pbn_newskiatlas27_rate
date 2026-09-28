@@ -1,0 +1,49 @@
+plugin.tx_pbnnewskiatlas27rate {
+    view {
+        # cat=pbn_newskiatlas27_rate/file/10; type=string; label=Override template root path
+        templateRootPath =
+        # cat=pbn_newskiatlas27_rate/file/20; type=string; label=Override partial root path
+        partialRootPath =
+    }
+
+    settings {
+        # cat=pbn_newskiatlas27_rate/lock/10; type=int+; label=Lock period in seconds: how long one visitor cannot vote again for the same record (259200 = 3 days). After this time a new, additional vote is allowed.
+        lockPeriod = 259200
+        # cat=pbn_newskiatlas27_rate/lock/20; type=int+; label=Max votes per anonymised IP and record within the lock period (0 = IP check off). Allows families on one Wi-Fi, blocks bulk voting.
+        ipLimit = 3
+        # cat=pbn_newskiatlas27_rate/lock/30; type=int+; label=Minimum seconds between loading the form and submitting it (bot protection)
+        minSubmitTime = 3
+        # cat=pbn_newskiatlas27_rate/lock/40; type=int+; label=Form token lifetime in seconds
+        tokenLifetime = 7200
+        # cat=pbn_newskiatlas27_rate/lock/50; type=string; label=Lock cookie name
+        cookieName = pbnrate
+
+        # cat=pbn_newskiatlas27_rate/storage/10; type=string; label=Question storage PID(s), comma separated (empty = all pages)
+        questionStoragePid =
+        # cat=pbn_newskiatlas27_rate/storage/20; type=int+; label=Vote storage PID
+        voteStoragePid = 0
+        # cat=pbn_newskiatlas27_rate/storage/30; type=string; label=Tables that may be rated (comma separated). The first one is the default table.
+        allowedTables = tx_pbnnewskiatlas27_domain_model_resort
+
+        # cat=pbn_newskiatlas27_rate/ajax/10; type=int+; label=typeNum of the JSON endpoint
+        ajaxTypeNum = 2727
+        # cat=pbn_newskiatlas27_rate/ajax/20; type=int+; label=Page used for the JSON endpoint (0 = current page)
+        ajaxPid = 0
+
+        # cat=pbn_newskiatlas27_rate/results/10; type=int+; label=Number of stars
+        maxStars = 5
+        # cat=pbn_newskiatlas27_rate/results/20; type=boolean; label=Show results (averages)
+        showResults = 1
+        # cat=pbn_newskiatlas27_rate/results/30; type=int+; label=Minimum number of votes before averages are shown
+        minVotesToShowResults = 1
+        # cat=pbn_newskiatlas27_rate/results/40; type=int+; label=Only count votes newer than N seconds (0 = all votes). Note: pages stay cached, set config.cache_period accordingly.
+        resultsMaxAge = 0
+        # cat=pbn_newskiatlas27_rate/results/50; type=string; label=Decimal separator
+        decimalSeparator = ,
+
+        # cat=pbn_newskiatlas27_rate/assets/10; type=boolean; label=Include default CSS
+        includeCss = 1
+        # cat=pbn_newskiatlas27_rate/assets/20; type=boolean; label=Include JavaScript
+        includeJs = 1
+    }
+}

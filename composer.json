@@ -1,0 +1,27 @@
+{
+    "name": "pbn/pbn-newskiatlas27-rate",
+    "type": "typo3-cms-extension",
+    "description": "Star ratings (1-5) with backend-defined questions for ski atlas resorts and other records, includable via Fluid.",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Pbn"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "typo3/cms-core": "^9.5",
+        "typo3/cms-frontend": "^9.5",
+        "typo3/cms-fluid": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pbn\\PbnNewskiatlas27Rate\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "pbn_newskiatlas27_rate"
+        }
+    }
+}

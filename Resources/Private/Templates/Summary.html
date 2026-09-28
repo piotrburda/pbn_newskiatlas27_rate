@@ -1,0 +1,7 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{rating.results.visible} && {rating.summary.result.count} > 0">
+    <div class="pbnrate-summary" title="{rating.summary.title}">
+        <f:render partial="Meter" arguments="{rating: rating, result: rating.summary.result}" />
+    </div>
+</f:if>
+</html>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="EXT:pbn_newskiatlas27_rate/Resources/Private/Language/locallang.xlf" product-name="pbn_newskiatlas27_rate">
+        <header/>
+        <body>
+            <trans-unit id="widget.title">
+                <source>Rate this resort</source>
+            </trans-unit>
+            <trans-unit id="widget.intro.days">
+                <source>Rate your stay from 1 to %1$s stars. You can rate the same resort again after %2$s day(s).</source>
+            </trans-unit>
+            <trans-unit id="widget.intro.hours">
+                <source>Rate your stay from 1 to %1$s stars. You can rate the same resort again after %2$s hour(s).</source>
+            </trans-unit>
+            <trans-unit id="widget.votes">
+                <source>Number of ratings: %s</source>
+            </trans-unit>
+            <trans-unit id="widget.noVotes">
+                <source>No ratings yet – be the first.</source>
+            </trans-unit>
+            <trans-unit id="widget.starLabel">
+                <source>%1$s of %2$s stars</source>
+            </trans-unit>
+            <trans-unit id="widget.average">
+                <source>Average %1$s of %2$s, %3$s rating(s)</source>
+            </trans-unit>
+            <trans-unit id="widget.requiredHint">
+                <source>* required</source>
+            </trans-unit>
+            <trans-unit id="widget.submit">
+                <source>Submit rating</source>
+            </trans-unit>
+            <trans-unit id="widget.noscript">
+                <source>Please enable JavaScript to rate this resort.</source>
+            </trans-unit>
+            <trans-unit id="js.loading">
+                <source>Checking whether you can rate…</source>
+            </trans-unit>
+            <trans-unit id="js.locked">
+                <source>You have already rated this resort. You can add a new rating after %s.</source>
+            </trans-unit>
+            <trans-unit id="js.thanks">
+                <source>Thank you for your rating. You can add a new one after %s.</source>
+            </trans-unit>
+            <trans-unit id="js.required">
+                <source>Please answer the required questions.</source>
+            </trans-unit>
+            <trans-unit id="js.noAnswers">
+                <source>Please select at least one star rating.</source>
+            </trans-unit>
+            <trans-unit id="js.tooFast">
+                <source>Just a moment – please submit again.</source>
+            </trans-unit>
+            <trans-unit id="js.expired">
+                <source>The form has expired. Please reload the page.</source>
+            </trans-unit>
+            <trans-unit id="js.error">
+                <source>The rating could not be saved. Please try again later.</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

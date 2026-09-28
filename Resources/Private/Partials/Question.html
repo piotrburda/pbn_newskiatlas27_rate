@@ -1,0 +1,31 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<fieldset class="pbnrate__question{f:if(condition: question.required, then: ' is-required')}"
+          data-pbnrate-question="{question.uid}"
+          data-required="{f:if(condition: question.required, then: '1', else: '0')}">
+    <legend class="pbnrate__question-title">
+        {question.title}<f:if condition="{question.required}"><span class="pbnrate__required" aria-hidden="true">*</span></f:if>
+    </legend>
+    <f:if condition="{question.description}">
+        <p class="pbnrate__question-description">{question.description}</p>
+    </f:if>
+
+    <div class="pbnrate__row">
+        <div class="pbnrate__input" data-pbnrate-input>
+            <f:for each="{rating.starValues}" as="value">
+                <input class="pbnrate__radio" type="radio"
+                       id="{rating.id}-q{question.uid}-{value}"
+                       name="pbnrate[answers][{question.uid}]"
+                       value="{value}">
+                <label class="pbnrate__star" for="{rating.id}-q{question.uid}-{value}"
+                       title="{f:translate(key: 'widget.starLabel', arguments: {0: value, 1: rating.maxStars})}">
+                    <span class="pbnrate__sr-only"><f:translate key="widget.starLabel" arguments="{0: value, 1: rating.maxStars}" /></span>
+                </label>
+            </f:for>
+        </div>
+
+        <div class="pbnrate__result" data-pbnrate-result="{question.uid}"{f:if(condition: question.result.show, else: ' hidden')}>
+            <f:render partial="Meter" arguments="{rating: rating, result: question.result}" />
+        </div>
+    </div>
+</fieldset>
+</html>

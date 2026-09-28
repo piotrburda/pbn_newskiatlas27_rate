@@ -1,0 +1,11 @@
+# Only needed when the site uses the PageTypeSuffix enhancer.
+# Merge the map entry into your existing PageTypeSuffix block in
+# config/sites/<site-identifier>/config.yaml so the JSON endpoint gets
+# a speaking suffix instead of ?type=2727.
+routeEnhancers:
+  PageTypeSuffix:
+    type: PageType
+    default: '/'
+    map:
+      '/': 0
+      'ocena.json': 2727
